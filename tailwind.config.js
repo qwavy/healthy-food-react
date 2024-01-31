@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
@@ -7,7 +8,11 @@ module.exports = {
     },
     extend: {
       colors:{
-        'dark-blue': '#274C5B'
+        'dark-blue': '#274C5B',
+        'light-yellow':'#EFD372'
+      },
+      backgroundImage:{
+        'background-1':'url(".//images/background_1.png")'
       }
     },
   },
