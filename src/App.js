@@ -12,8 +12,16 @@ import image_5 from './images/image_5.jpg'
 import image_6 from './images/image_6.jpg'
 import image_7 from './images/image_7.jpg'
 import image_8 from './images/image_8.jpg'
+import image_9 from './images/image_9.png'
+import image_10 from './images/image_10.png'
 import icon_2 from './images/icon_2.png'
 import icon_1 from './images/icon_1.png'
+import icon_3 from './images/icon_3.png'
+
+import facebook from './images/Facebook.png'
+import insta from './images/Insta.png'
+import pinterest from './images/Pintrest.png'
+import twitter from './images/Twiter.png'
 
 import product_image_1 from './images/products/product_image_1.png'
 import product_image_2 from './images/products/product_image_2.png'
@@ -42,7 +50,7 @@ const App = () => {
   const freshProducts = products.slice(0, 4)
 
   return (
-    <div className='w'>
+    <div className='max-w-[1920px] m-auto'>
 
       <header className='flex justify-around items-center w-full'>
         <div className='flex justify-around w-7/12'>
@@ -151,8 +159,8 @@ const App = () => {
             <span className='font-roboto text-xl text-white'>Load More</span>
           </button>
         </div>
-        <div className=' mt-24 bg-background-4 bg-no-repeat w-full bg-center'>
-          <div className='flex justify-center text-center'>
+        <div className=' mt-24 bg-background-4 bg-no-repeat w-full bg-center h-[100vh] flex flex-col content-center justify-center'>
+          <div className='flex justify-center text-center content-center'>
 
             <div className='w-full'>
 
@@ -177,7 +185,7 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className='flex justify-center'>
+          <div className='flex justify-center mt-44'>
             <div className='flex justify-evenly w-7/12'>
               <div className='rounded-full border-solid border-light-green w-52 h-52 flex justify-center flex-col text-center   border-4'>
                 <span className='text-3xl text-dark-blue font-bold'>100%</span>
@@ -269,8 +277,116 @@ const App = () => {
             <img src={image_8} className=' rounded-xl' />
           </div>
         </div>
+        <div className='mt-48'>
+          <div className='flex justify-around'>
+            <div className='flex flex-col'>
+              <span className='font-yellowtail text-light-green text-3xl'>News</span>
+              <span className='font-roboto text-dark-blue text-5xl'>Discover weekly content about organic food, & more</span>
+            </div>
+            <button className=' border-dark-blue border-2 rounded-xl p-4 bg-white w-48'>
+              <span className='text-dark-blue font-bold font-roboto'>
+                More News
+              </span></button>
+          </div>
+          <div className='flex justify-evenly mt-12'>
+            <div className='relative flex  justify-center content-center items-end'>
+              <img src={image_9} className='rounded-xl w-full' />
+              <div className='w-5/6 bg-white absolute h-72 rounded-xl p-12'>
+                <div className='flex'>
+                  <img src={icon_3} className='mr-7 w-[25px] h-[30px]' />
+                  <span className='font-roboto font-bold text-2xl text-dark-blue'>By Rachi Card</span>
+                </div>
+                <div className='flex flex-col justify-evenly h-[200px]'>
 
+                  <span className='font-roboto font-bold text-2xl text-dark-blue'>The Benefits of Vitamin D & How to Get It</span>
+                  <span className='font-roboto text-light-black'>Simply dummy text of the printing and typesetting industry. Lorem Ipsum</span>
+                  <button className='bg-light-yellow rounded-xl p-4 w-2/6'>
+                    <span className='text-dark-blue font-bold '>
+                      Read More
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className='relative flex  justify-center content-center items-end'>
+              <img src={image_10} className='rounded-xl w-full' />
+              <div className='w-5/6 bg-white absolute h-72 rounded-xl p-12'>
+                <div className='flex'>
+                  <img src={icon_3} className='mr-7 w-[25px] h-[30px]' />
+                  <span className='font-roboto font-bold text-2xl text-dark-blue'>By Rachi Card</span>
+                </div>
+                <div className='flex flex-col justify-evenly h-[200px]'>
+
+                  <span className='font-roboto font-bold text-2xl text-dark-blue'>Our Favourite Summertime Tommeto</span>
+                  <span className='font-roboto text-light-black'>Simply dummy text of the printing and typesetting industry. Lorem Ipsum</span>
+                  <button className='bg-light-yellow rounded-xl p-4 w-2/6'>
+                    <span className='text-dark-blue font-bold '>
+                      Read More
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='bg-background-5 bg-no-repeat  bg-center w-full h-[300px]  flex justify-evenly  items-center rounded-xl mt-24' >
+
+          <span className='text-white text-4xl font-roboto font-bold'>Subscribe to
+            our Newsletter
+          </span>
+          <div>
+            <input className='rounded-xl p-4 placeholder:font-roboto font-bold' placeholder='Your Email Address' />
+            <button className='bg-dark-blue rounded-xl p-4 ml-2'>
+              <span className='text-white font-roboto font-bold'>
+                Subscribe
+              </span></button>
+          </div>
+        </div>
       </main>
+      <footer className='flex justify-evenly mt-24'>
+        <div className='flex items-center'>
+          <div className='flex flex-col'>
+
+            <span className='font-roboto font-bold text-dark-blue text-3xl'>Contact Us</span>
+            <ul className='flex flex-col justify-evenly h-[300px] items-end'>
+              <li className='font-roboto font-bold text-xl text-dark-blue'>Email</li>
+              <li>needhellp@Organick.com</li>
+              <li className='font-roboto font-bold text-xl text-dark-blue'>Phone</li>
+              <li>666 888 888</li>
+              <li className='font-roboto font-bold text-xl text-dark-blue'>Address</li>
+              <li>88 road borklyn street, USA</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div className='flex items-center content-center'>
+
+            <img src={logo} className='w-10 m-3' />
+            <span className='font-roboto font-bold text-dark-blue text-3xl'>Organick</span>
+
+          </div>
+          <div className='flex justify-evenly'>
+            <img src={insta} />
+            <img src={facebook} />
+            <img src={twitter} />
+            <img src={pinterest} />
+          </div>
+        </div>
+        <div className='flex items-center'>
+          <div className='flex flex-col'>
+
+            <span className='font-roboto font-bold text-dark-blue text-3xl'>Utility Pages</span>
+            <ul className='flex flex-col justify-evenly h-[300px] items-end'>
+              <li>Style Guide</li>
+              <li>404 Not Found</li>
+              <li>Password Protected</li>
+              <li>Licences</li>
+              <li>Changelog</li>
+              <li>Changelog</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

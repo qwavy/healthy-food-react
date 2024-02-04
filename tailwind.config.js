@@ -19,7 +19,8 @@ module.exports = {
         'background-1':'url(".//images/background_1.png")',
         'background-2':'url(".//images/background_2.jpg")',
         'background-3':'url(".//images/background_3.jpg")',
-        'background-4':'url(".//images/background_4.png")'
+        'background-4':'url(".//images/background_4.png")',
+        'background-5':'url(".//images/background_5.jpg")'
       }
     },
   },
