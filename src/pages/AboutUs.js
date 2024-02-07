@@ -44,18 +44,19 @@ const AboutUs = () => {
                         <span className='font-roboto font-bold text-dark-blue text-5xl p-4'>We do not buy from the
                             open market & traders.</span>
                         <span className='font-roboto text-light-black text-xl p-4'>Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard  the 1500s, when an unknown</span>
-                        <div className='flex flex-col'>
+                        <div className='flex flex-col justify-between h-48'>
                             <div className='rounded-xl bg-light-grey p-4 w-2/5'>
                                 <span className='font-roboto text-xl text-dark-blue font-semibold'>
                                     100% Natural Product
                                 </span>
                                 </div>
-                            <span className=''>Simply dummy text of the printing and typesetting industry Lorem Ipsum</span>
+                            <span className='ml-12'>Simply dummy text of the printing and typesetting industry Lorem Ipsum</span>
                             <div className='rounded-xl bg-light-grey p-4 w-2/5'>
                                 <span className='font-roboto text-xl text-dark-blue font-semibold'>
                                 Increases resistance
                                 </span>
                             </div>
+                            <span>Filling, and temptingly healthy, our Biona Organic Granola with Wild Berries is just the thing</span>
                         </div>
                     </div>
                     <img src={image_2} />
