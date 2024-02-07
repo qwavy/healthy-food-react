@@ -48,11 +48,12 @@ const AboutUs = () => {
                             <div className='rounded-xl bg-light-grey p-4 w-2/5'>
                                 <span className='font-roboto text-xl text-dark-blue font-semibold'>
                                     100% Natural Product
-                                </span></div>
-                            <span className='s'>Simply dummy text of the printing and typesetting industry Lorem Ipsum</span>
-                            <div> Increases resistance
-                                <span>
-                                    Filling, and temptingly healthy, our Biona Organic Granola with Wild Berries is just the thing
+                                </span>
+                                </div>
+                            <span className=''>Simply dummy text of the printing and typesetting industry Lorem Ipsum</span>
+                            <div className='rounded-xl bg-light-grey p-4 w-2/5'>
+                                <span className='font-roboto text-xl text-dark-blue font-semibold'>
+                                Increases resistance
                                 </span>
                             </div>
                         </div>
