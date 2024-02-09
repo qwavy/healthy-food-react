@@ -19,10 +19,12 @@ import insta from "../images/Insta.png";
 import pinterest from "../images/Pintrest.png";
 import twitter from "../images/Twiter.png";
 import Footer from "../templates/Footer";
+import Header from "../templates/Header";
 
 const AboutUs = () => {
   return (
     <div>
+      <Header/>
       <div className="bg-about-background-header bg-no-repeat bg-center w-full flex justify-center items-center h-[450px]">
         <h1 className="text-dark-blue text-5xl font-roboto font-bold">
           About Us

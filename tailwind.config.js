@@ -23,7 +23,8 @@ module.exports = {
         'background-3':'url(".//images/background_3.jpg")',
         'background-4':'url(".//images/background_4.png")',
         'background-5':'url(".//images/background_5.jpg")',
-        'about-background-header':'url(".//images/about_background_header.png")'
+        'about-background-header':'url(".//images/about_background_header.png")',
+        'shop-background-header':'url(".//images/shop_background_header.png")'
       }
     },
   },
