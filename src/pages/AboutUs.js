@@ -3,6 +3,10 @@ import image_2 from "../images/about_image_2.jpg";
 import team_image_1 from "../images/about_team_1.jpg";
 import team_image_2 from "../images/about_team_2.jpg";
 import team_image_3 from "../images/about_team_3.jpg";
+import product_image_1 from "../images/about_image_product_1.jpg";
+import product_image_2 from "../images/about_image_product_2.jpg";
+import product_image_3 from "../images/about_image_product_3.jpg";
+import product_image_4 from "../images/about_image_product_4.jpg";
 import icon_1 from "../images/about_icon_1.png";
 import icon_2 from "../images/about_icon_2.png";
 import icon_3 from "../images/about_icon_3.png";
@@ -14,6 +18,7 @@ import facebook from "../images/Facebook.png";
 import insta from "../images/Insta.png";
 import pinterest from "../images/Pintrest.png";
 import twitter from "../images/Twiter.png";
+import Footer from "../templates/Footer";
 
 const AboutUs = () => {
   return (
@@ -168,7 +173,7 @@ const AboutUs = () => {
                   </span>
                 </div>
                 <div className="flex items-end">
-                  <img src={facebook} className="mr-6"/>
+                  <img src={facebook} className="mr-6" />
                   <img src={insta} />
                 </div>
               </div>
@@ -185,7 +190,7 @@ const AboutUs = () => {
                   </span>
                 </div>
                 <div className="flex items-end">
-                  <img src={facebook} className="mr-6"/>
+                  <img src={facebook} className="mr-6" />
                   <img src={insta} />
                 </div>
               </div>
@@ -202,14 +207,52 @@ const AboutUs = () => {
                   </span>
                 </div>
                 <div className="flex items-end">
-                  <img src={facebook} className="mr-6"/>
+                  <img src={facebook} className="mr-6" />
                   <img src={insta} />
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div className="bg-dark-blue">
+          <div className="flex justify-center flex-col pt-24">
+            <span className="font-yellowtail text-light-green text-xl text-center">
+              About Us
+            </span>
+            <span className="font-roboto text-white font-bold text-3xl text-center">
+              What We Offer for You
+            </span>
+          </div>
+          <div className="flex justify-center pb-12">
+            <div className="flex flex-col justify-center items-center p-8 rounded-xl">
+              <img src={product_image_1} className="rounded-xl"/>
+              <span className="font-roboto text-white font-bold text-xl mt-4">
+                Spicy
+              </span>
+            </div>{" "}
+            <div className="flex flex-col justify-center items-center p-8 rounded-xl">
+              <img src={product_image_2} className="rounded-xl"/>
+              <span className="font-roboto text-white font-bold text-xl mt-4">
+                Spicy
+              </span>
+            </div>{" "}
+            <div className="flex flex-col justify-center items-center p-8 rounded-xl">
+              <img src={product_image_3} className="rounded-xl"/>
+              <span className="font-roboto text-white font-bold text-xl mt-4">
+                Spicy
+              </span>
+            </div>{" "}
+            <div className="flex flex-col justify-center items-center p-8 rounded-xl">
+              <img src={product_image_4} className="rounded-xl"/>
+              <span className="font-roboto text-white font-bold text-xl mt-4">
+                Spicy
+              </span>
+            </div>
+          </div>
+        </div>
+        
       </main>
+      <Footer/>
     </div>
   );
 };

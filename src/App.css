@@ -5,8 +5,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .rounded-bg{
-        -moz-border-radius: 10px;
-    }
-}
