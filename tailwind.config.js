@@ -24,7 +24,8 @@ module.exports = {
         'background-4':'url(".//images/background_4.png")',
         'background-5':'url(".//images/background_5.jpg")',
         'about-background-header':'url(".//images/about_background_header.png")',
-        'shop-background-header':'url(".//images/shop_background_header.png")'
+        'shop-background-header':'url(".//images/shop_background_header.png")',
+        'shop-single-background-header':'url(".//images/shop_single_background_header.png")'
       }
     },
   },

@@ -1,23 +1,26 @@
-import './App.css'
+import "./App.css";
+import { Route, Routes, Link } from "react-router-dom";
 
-
-
-
-import MainPage from './MainPage'
-import AboutUs from './pages/AboutUs'
-import Shop from './pages/Shop'
-
+import MainPage from "./MainPage";
+import AboutUs from "./pages/AboutUs";
+import Shop from "./pages/Shop";
+import ShopSingle from "./pages/ShopSingle";
+import { ProductProvider } from "./components/context/ProductIdContext";
 
 const App = () => {
-
-
-
-
   return (
-    <div className='w-[1920px] m-auto'>
-      <Shop/>
-      {/* <MainPage/> */}
-    </div>
-  )
-}
-export default App
+    <ProductProvider>
+      <div className="w-[1920px] m-auto">
+        <Routes>
+          <Route path="*" element={<MainPage />} />
+          <Route path="/Shop" element={<Shop />} />
+          <Route path="/Shop/:id" element={<ShopSingle />} />
+        </Routes>
+        {/* <Shop/> */}
+        {/* <MainPage/> */}
+        {/* <ShopSingle/> */}
+      </div>
+    </ProductProvider>
+  );
+};
+export default App;
