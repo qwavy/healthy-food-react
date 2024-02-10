@@ -30,8 +30,10 @@ const ShopSingle = () => {
               <div>
                 <img src={product.image} className="w-[600px]" />
               </div>
-              <div>
-                <span className="text-5xl text-dark-blue font-roboto font-bold">Health Pistachios</span>
+              <div className="flex flex-col content-center  self-center">
+                <span className="text-5xl text-dark-blue font-roboto font-bold">
+                  {product.name}
+                </span>
                 <div className="flex ">
                   {[...Array(5)].map((_, index) => (
                     <div key={index}>
@@ -42,6 +44,28 @@ const ShopSingle = () => {
                       )}
                     </div>
                   ))}
+                </div>
+                <div className="flex w-64 justify-between">
+                  <span className="line-through font-bold text-light-black text-3xl">
+                    ${product.old_price}.00
+                  </span>
+                  <span className="font-bold text-dark-blue text-3xl">
+                    ${product.old_price}.20
+                  </span>
+                </div>
+                <span>
+                  Simply dummy text of the printing and typesetting industry.
+                  Lorem had ceased to been the industry's standard dummy text
+                  ever since the 1500s, when an unknown printer took a galley.
+                </span>
+                <div>
+                  <span className="text-dark-blue font-roboto font-bold text-xl">Quantity :</span>
+                  <div>
+                    <span>1</span>
+                  </div>
+                  <button>
+                    <span>Add To Cart</span>
+                  </button>
                 </div>
               </div>
             </div>
