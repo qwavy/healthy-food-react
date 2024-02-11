@@ -35,8 +35,8 @@ const Shop = () => {
         <div className="flex justify-center mt-8 ">
           <div className="grid grid-rows-2 grid-cols-4">
             {products.map((product) => (
-              <Link to={`/Shop/${product.id}`} onClick={() => changeId(product.id)}>
-                <div className="mt-12 p-8">
+              <Link to={`/Shop/${product.id}`} onClick={() => changeId(product.id)} className="mt-12 p-8">
+                {/* <div className=""> */}
                   <div className="bg-dark-blue rounded-xl p-2  w-3/12 text-center">
                     <span className="text-white font-roboto">
                       {product.category}
@@ -67,7 +67,7 @@ const Shop = () => {
                       ))}
                     </div>
                   </div>
-                </div>
+                {/* </div> */}
               </Link>
             ))}
           </div>
