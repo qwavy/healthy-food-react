@@ -8,7 +8,7 @@ import logo from "../images/logo.png";
 const Footer = () => {
   return (
     <div>
-      <div className="bg-background-5 bg-no-repeat  bg-center w-full h-[300px]  flex justify-evenly  items-center rounded-xl mt-24">
+      <div className="bg-background-5 bg-no-repeat  bg-center w-full h-[300px]  flex justify-evenly  items-center rounded-xl mt-24 font-roboto">
           <span className="text-white text-4xl font-roboto font-bold">
             Subscribe to our Newsletter
           </span>

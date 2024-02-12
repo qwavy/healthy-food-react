@@ -7,20 +7,19 @@ import Shop from "./pages/Shop";
 import ShopSingle from "./pages/ShopSingle";
 import { ProductProvider } from "./components/context/ProductIdContext";
 import Services from "./pages/Services";
+import Header from "./templates/Header";
 
 const App = () => {
   return (
     <ProductProvider>
-      <div className="w-[1920px] m-auto">
+      <div className="m-auto">
         <Routes>
           <Route path="*" element={<MainPage />} />
           <Route path="/Shop" element={<Shop />} />
           <Route path="/Shop/:id" element={<ShopSingle />} />
           <Route path="/Services" element={<Services />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
         </Routes>
-        {/* <Shop/> */}
-        {/* <MainPage/> */}
-        {/* <ShopSingle/> */}
       </div>
     </ProductProvider>
   );

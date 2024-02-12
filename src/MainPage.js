@@ -103,34 +103,35 @@ const MainPage = () => {
   const freshProducts = products.slice(0, 4);
 
   return (
-    <div className="max-w-[1920px] m-auto">
+    <div className="m-auto">
       <Header />
-      <main>
-        <div className="flex justify-center bg-background-1 bg-center">
-          <div className="flex justify-center flex-col ">
-            <span className="text-light-green font-yellowtail text-5xl text-start">
+      <main className=" m-auto">
+        <div class="flex justify-center bg-background-1 bg-center flex-col lg:flex-row">
+          <div class="flex justify-center flex-col items-center self-center w-full">
+            <span class="text-light-green font-yellowtail text-start text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
               100% Natural Food
             </span>
-            <h1 className="font-roboto text-dark-blue text-7xl flex justify-center w-[600px] font-bold">
+            <h1 class="font-roboto text-dark-blue text-center font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl mt-3">
               Choose the best healthier way of life
             </h1>
-            <button className="bg-light-yellow p-6 rounded-2xl font-roboto text-dark-blue text-2xl mt-5 w-64 font-bold">
+            <button class="bg-light-yellow p-4 md:p-6 rounded-lg font-roboto text-dark-blue mt-5 w-48 sm:w-64 font-bold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
               Explore Now
             </button>
           </div>
 
-          <img src={image_1} className="relative" />
+          <img src={image_1} class="hidden lg:block relative md:w-[600px]" />
         </div>
-        <div className="flex justify-evenly mt-48">
-          <div className="bg-background-2 w-[600px]  h-[365px] rounded-xl flex justify-center flex-col">
-            <span className="text-white font-yellowtail ml-12 text-3xl">
+
+        <div className="flex justify-between mt-48 flex-col lg:flex-row lg:justify-evenly h-[800px] ">
+          <div className="bg-background-2  bg-no-repeat bg-center h-[365px] rounded-xl flex justify-center flex-col lg:min-w-[600px] ">
+            <span className="text-white font-yellowtail ml-12 text-3xl ">
               Natural!!
             </span>
             <span className="font-roboto text-white ml-12 text-4xl w-48 font-bold">
               Get Garden Fresh Fruits
             </span>
           </div>
-          <div className="bg-background-3 w-[600px] h-[365px] rounded-xl flex justify-center flex-col">
+          <div className="bg-background-3 bg-no-repeat bg-center h-[365px] rounded-xl flex justify-center flex-col">
             <span className="text-light-green font-yellowtail ml-12 text-3xl">
               Offer!!
             </span>
@@ -139,7 +140,9 @@ const MainPage = () => {
             </span>
           </div>
         </div>
-        <div className="flex justify-center ">
+
+
+        {/* <div className="flex justify-center ">
           <img src={image_2} />
 
           <div className="w-[700px] flex justify-center flex-col p-8">
@@ -473,7 +476,7 @@ const MainPage = () => {
               </span>
             </button>
           </div>
-        </div>
+        </div> */}
       </main>
       <footer className="flex justify-evenly mt-24">
         <div className="flex items-center">
