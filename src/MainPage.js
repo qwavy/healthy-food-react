@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
+
 
 import logo from "./images/logo.png";
 import search_icon from "./images/search_icon.png";
@@ -16,6 +17,11 @@ import image_10 from "./images/image_10.png";
 import icon_2 from "./images/icon_2.png";
 import icon_1 from "./images/icon_1.png";
 import icon_3 from "./images/icon_3.png";
+import star from "./images/image_4.png";
+
+
+import background_2 from ".//images/background_2.jpg";
+import background_3 from ".//images/background_3.jpg";
 
 import facebook from "./images/Facebook.png";
 import insta from "./images/Insta.png";
@@ -31,76 +37,22 @@ import product_image_6 from "./images/products/product_image_6.png";
 import product_image_7 from "./images/products/product_image_7.png";
 import product_image_8 from "./images/products/product_image_8.png";
 import Header from "./templates/Header";
+import { Link } from "react-router-dom";
+import { ProductContext } from "./components/context/ProductIdContext"
+
 
 const MainPage = () => {
-  const [products, setProducts] = useState([
-    {
-      id: 1,
-      name: "Calabrese Broccoli",
-      image: product_image_1,
-      category: "Vegetable",
-      price: 13,
-      old_price: 20,
-    },
-    {
-      id: 2,
-      name: "Fresh Bananas",
-      image: product_image_2,
-      category: "Fresh",
-      price: 14,
-      old_price: 20,
-    },
-    {
-      id: 3,
-      name: "Whtie Nuts",
-      image: product_image_3,
-      category: "Millets",
-      price: 15,
-      old_price: 20,
-    },
-    {
-      id: 4,
-      name: "Red Tomamto",
-      image: product_image_4,
-      category: "Vegetable",
-      price: 17,
-      old_price: 20,
-    },
-    {
-      id: 5,
-      name: "Mung Bean",
-      image: product_image_5,
-      category: "Health",
-      price: 11,
-      old_price: 20,
-    },
-    {
-      id: 6,
-      name: "Brown Hazelnut",
-      image: product_image_6,
-      category: "Nuts",
-      price: 12,
-      old_price: 20,
-    },
-    {
-      id: 7,
-      name: "Eggs",
-      image: product_image_7,
-      category: "Fresh",
-      price: 17,
-      old_price: 20,
-    },
-    {
-      id: 8,
-      name: "Zelco Suji Elaichi Rusk",
-      image: product_image_8,
-      category: "Fresh",
-      price: 15,
-      old_price: 20,
-    },
-  ]);
+  const [products,setProducts] = useState([])
 
   const freshProducts = products.slice(0, 4);
+
+  const { changeId } = useContext(ProductContext);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/products")
+      .then(res => res.json())
+      .then(data => setProducts(data))
+  },[])
 
   return (
     <div className="m-auto">
@@ -122,70 +74,76 @@ const MainPage = () => {
           <img src={image_1} class="hidden lg:block relative md:w-[600px]" />
         </div>
 
-        <div className="flex justify-between mt-48 flex-col lg:flex-row lg:justify-evenly h-[800px] ">
-          <div className="bg-background-2  bg-no-repeat bg-center h-[365px] rounded-xl flex justify-center flex-col lg:min-w-[600px] ">
-            <span className="text-white font-yellowtail ml-12 text-3xl ">
-              Natural!!
-            </span>
-            <span className="font-roboto text-white ml-12 text-4xl w-48 font-bold">
-              Get Garden Fresh Fruits
-            </span>
+        <div className="flex justify-between mt-48 flex-col lg:flex-row lg:justify-evenly rounded-xl w-5/6 m-auto">
+          <div className="relative flex justify-center flex-col lg:w-full lg:mr-[30px]">
+            <img src={background_2} className="rounded-xl" />
+            <div className="absolute flex flex-col justify-center">
+              <span className="text-white font-yellowtail ml-12 text-2xl ">
+                Natural!!
+              </span>
+              <span className="font-roboto text-white ml-12 w-48 font-bold text-4xl ">
+                Get Garden Fresh Fruits
+              </span>
+            </div>
           </div>
-          <div className="bg-background-3 bg-no-repeat bg-center h-[365px] rounded-xl flex justify-center flex-col">
-            <span className="text-light-green font-yellowtail ml-12 text-3xl">
-              Offer!!
-            </span>
-            <span className="text-dark-blue font-roboto text-4xl w-96 ml-12 font-bold">
-              Get 10% off on Vegetables
-            </span>
+          <div className="relative flex justify-center flex-col mt-[100px] lg:mt-0 lg:w-full">
+            <img src={background_3} className="rounded-xl" />
+            <div className="absolute flex flex-col justify-center">
+              <span className="text-light-green font-yellowtail ml-12 text-2xl ">
+                Offer!!
+              </span>
+              <span className="font-roboto text-dark-blue ml-12 w-48 font-bold text-4xl ">
+                Get 10% off on Vegetables
+              </span>
+            </div>
           </div>
         </div>
 
+        <div className="flex justify-center flex-col lg:flex-row lg:justify-center items-center lg:items-start">
+          <img src={image_2} className="hidden 2xl:block lg:w-1/2" />
 
-        {/* <div className="flex justify-center ">
-          <img src={image_2} />
-
-          <div className="w-[700px] flex justify-center flex-col p-8">
-            <span className="font-yellowtail text-light-green text-3xl">
+          <div className="flex flex-col justify-center p-8 lg:w-1/2 lg:ml-8">
+            <span className="font-yellowtail text-light-green text-3xl lg:text-4xl">
               About Us
             </span>
-            <h1 className="text-6xl font-roboto font-bold text-dark-blue">
+            <h1 className="text-4xl lg:text-6xl font-roboto font-bold text-dark-blue mt-4">
               We Believe in Working Accredited Farmers
             </h1>
-            <span className="text-light-black text-xl">
+            <p className="text-lg lg:text-xl text-light-black mt-4">
               Simply dummy text of the printing and typesetting industry. Lorem
               had ceased to been the industry's standard dummy text ever since
               the 1500s, when an unknown printer took a galley.
-            </span>
-            <div className="flex justify-around mt-8">
-              <img src={icon_1} />
-              <div className="flex flex-col ">
-                <span className="font-roboto text-dark-blue font-bold text-3xl">
+            </p>
+            <div className="flex justify-around mt-8 lg:mt-12 w-full lg:w-[700px] items-center">
+              <img src={icon_1} className="w-12 h-12" />
+              <div className="flex flex-col">
+                <span className="font-roboto text-dark-blue font-bold text-xl lg:text-3xl">
                   Organic Foods Only
                 </span>
-                <span className="font-roboto text-s text-light-black">
+                <span className="font-roboto text-sm lg:text-base text-light-black mt-1">
                   Simply dummy text of the printing and typesetting industry.
                   Lorem Ipsum
                 </span>
               </div>
             </div>
-            <div className="flex justify-around mt-8">
-              <img src={icon_2} />
+            <div className="flex justify-around mt-8 lg:mt-12 w-full lg:w-[700px] items-center">
+              <img src={icon_2} className="w-12 h-12" />
               <div className="flex flex-col">
-                <span className="font-roboto text-dark-blue font-bold text-3xl">
+                <span className="font-roboto text-dark-blue font-bold text-xl lg:text-3xl">
                   Quality Standards
                 </span>
-                <span className="font-roboto text-s text-light-black">
+                <span className="font-roboto text-sm lg:text-base text-light-black mt-1">
                   Simply dummy text of the printing and typesetting industry.
                   Lorem Ipsum
                 </span>
               </div>
             </div>
-            <button className="bg-dark-blue rounded-xl w-48 mt-12 h-12">
+            <button className="bg-dark-blue rounded-xl w-48 h-12 mt-8 lg:mt-12">
               <span className="text-white font-bold font-roboto">Shop now</span>
             </button>
           </div>
         </div>
+
         <div className="text-center flex justify-center flex-col">
           <span className="text-light-green font-yellowtail text-3xl ">
             Categories
@@ -195,9 +153,14 @@ const MainPage = () => {
           </span>
         </div>
         <div className="flex justify-center mt-8 ">
-          <div className="grid grid-rows-2 grid-cols-4">
+          <div className="grid grid-rows-4 grid-cols-2 lg:grid-rows-3 lg:grid-cols-3 xl:grid-rows-2 xl:grid-cols-4">
             {products.map((product) => (
-              <div className="mt-12">
+              <Link
+                to={`/Shop/${product.id}`}
+                onClick={() => changeId(product.id)}
+                className="mt-12 p-8"
+              >
+                {/* <div className=""> */}
                 <div className="bg-dark-blue rounded-xl p-2  w-3/12 text-center">
                   <span className="text-white font-roboto">
                     {product.category}
@@ -207,19 +170,46 @@ const MainPage = () => {
                 <span className="font-roboto text-dark-blue font-bold text-xl">
                   {product.name}
                 </span>
-                <div className="flex justify-around">
-                  <span className="line-through font-bold text-dark-blue">
-                    ${product.old_price}.00
-                  </span>
-                  <span className="font-bold text-dark-blue">
-                    ${product.price}.00
-                  </span>
+                <div className="flex justify-between">
+                  <div className="p-4">
+                    <span className="line-through font-bold text-dark-blue mr-4">
+                      ${product.old_price}.00
+                    </span>
+                    <span className="font-bold text-dark-blue">
+                      ${product.price}.00
+                    </span>
+                  </div>
+                  <div className="flex">
+                    {[...Array(5)].map((_, index) => (
+                      <div key={index}>
+                        {index < product.rating ? (
+                          <img src={star} />
+                        ) : (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={1.5}
+                            stroke="currentColor"
+                            className="w-6 h-6"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                            />
+                          </svg>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+                {/* </div> */}
+              </Link>
             ))}
           </div>
         </div>
-        <div className="flex justify-center mt-24">
+        {/* <div className="flex justify-center mt-24">
           <button className="bg-dark-blue p-6 rounded-xl">
             <span className="font-roboto text-xl text-white">Load More</span>
           </button>
