@@ -276,7 +276,7 @@ const MainPage = () => {
             ))}
           </div>
         </div>
-        {/* <div className="flex justify-center mt-24">
+        <div className="flex justify-center mt-24">
           <button className="bg-dark-blue p-6 rounded-xl">
             <span className="font-roboto text-xl text-white">Load More</span>
           </button>
@@ -533,7 +533,7 @@ const MainPage = () => {
               </span>
             </button>
           </div>
-        </div> */}
+        </div>
       </main>
       <footer className="flex justify-evenly mt-24">
         <div className="flex items-center">
