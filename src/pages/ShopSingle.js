@@ -17,18 +17,18 @@ const ShopSingle = () => {
 
   const [productsRelated, setProductsRelated] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/product${id}`)
-      .then((res) => res.json())
-      .then((data) => setProduct(data));
-
-    fetch("http://localhost:5000/products")
-      .then((res) => res.json())
-      .then((data) => {
-        setProductsRelated(data.slice(0, 4));
-      });
-    // fetch(`https://localhost:7173/todoitems`)
+    // fetch(`http://localhost:5000/product${id}`)
     //   .then((res) => res.json())
-    //   .then((data) => console.log(data));
+    //   .then((data) => setProduct(data));
+
+    // fetch("http://localhost:5000/products")
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     setProductsRelated(data.slice(0, 4));
+    //   });
+    fetch(`https://localhost:7173/products/${id}`)
+      .then((res) => res.json())
+      .then((data) => setProduct([data]));
   }, []);
 
   return (

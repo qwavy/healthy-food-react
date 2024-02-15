@@ -142,7 +142,7 @@ const MainPage = () => {
         </div>
 
         <div className="flex justify-between mt-48 flex-col lg:flex-row lg:justify-evenly rounded-xl w-5/6 m-auto">
-          <div className="relative flex justify-center flex-col lg:w-full lg:mr-[30px]">
+          <div className="relative flex justify-center flex-col lg:w-full lg:mr-[30px] max-w-[1000px]">
             <img src={background_2} className="rounded-xl" />
             <div className="absolute flex flex-col justify-center">
               <span className="text-white font-yellowtail ml-12 text-2xl ">
@@ -153,7 +153,7 @@ const MainPage = () => {
               </span>
             </div>
           </div>
-          <div className="relative flex justify-center flex-col mt-[100px] lg:mt-0 lg:w-full">
+          <div className="relative flex justify-center flex-col mt-[100px] lg:mt-0 lg:w-full max-w-[1000px]">
             <img src={background_3} className="rounded-xl" />
             <div className="absolute flex flex-col justify-center">
               <span className="text-light-green font-yellowtail ml-12 text-2xl ">
@@ -167,7 +167,7 @@ const MainPage = () => {
         </div>
 
         <div className="flex justify-center flex-col lg:flex-row lg:justify-center items-center lg:items-start">
-          <img src={image_2} className="hidden 2xl:block lg:w-1/2" />
+          <img src={image_2} className="hidden 2xl:block w-6/12 max-w-[1000px]" />
 
           <div className="flex flex-col justify-center p-8 lg:w-1/2 lg:ml-8">
             <span className="font-yellowtail text-light-green text-3xl lg:text-4xl">
@@ -225,15 +225,14 @@ const MainPage = () => {
               <Link
                 to={`/Shop/${product.id}`}
                 onClick={() => changeId(product.id)}
-                className="mt-12 p-8"
+                className="mt-12 p-8 min-w-[335px]"
               >
-                {/* <div className=""> */}
                 <div className="bg-dark-blue rounded-xl p-2  w-3/12 text-center">
                   <span className="text-white font-roboto">
                     {product.category}
                   </span>
                 </div>
-                <img src={product.image} className="h-5/6" />
+                <img src={product.image} className="h-5/6  " />
                 <span className="font-roboto text-dark-blue font-bold text-xl">
                   {product.name}
                 </span>
@@ -271,7 +270,6 @@ const MainPage = () => {
                     ))}
                   </div>
                 </div>
-                {/* </div> */}
               </Link>
             ))}
           </div>
@@ -281,7 +279,7 @@ const MainPage = () => {
             <span className="font-roboto text-xl text-white">Load More</span>
           </button>
         </div>
-        <div className=" mt-24 bg-background-4 bg-no-repeat w-full bg-center h-[100vh] flex flex-col content-center justify-center">
+        <div className=" mt-24 bg-background-4  w-full bg-center h-[100vh] flex flex-col content-center justify-center">
           <div className="flex justify-center text-center content-center">
             <div className="w-full">
               <p className="font-yellowtail text-light-green text-3xl">
